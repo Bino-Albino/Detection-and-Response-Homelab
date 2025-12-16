@@ -32,22 +32,16 @@ The lab is hosted on VirtualBox and is designed to mimic a small corporate netwo
 Below are some of the more interesting detection and response use cases implemented in this lab.
 Each item links to a detailed breakdown explaining the logic, rules and results.
 
-🔹 [Active Response: VirusTotal Integration](./active.response.md) 
+### [Active Response: VirusTotal Integration](./active.response.md) 
+Integrated **VirusTotal** with **Wazuh** to enable automated malware detection and removal on endpoints. When FIM detects a new file in monitored directories, the hash is queried against VirusTotal's threat intelligence database. Malicious files trigger an Active Response script that deletes the file and generates an alert.
 
-- **The Goal**: Automatically detect and delete malicious files downloaded on endpoints.
+---
 
-- **How**: Integrated the VirusTotal API with Wazuh. When the FIM (File Integrity Monitoring) module detects a new file, the hash is sent to VT. If the positive hit rate exceeds the threshold, an Active Response script immediately deletes the file and send an alert.
+### [Blocking SSH Anomalies (Geo/IP Filtering)](./active.response.md) 
+Implemented geolocation-based access control for privileged accounts. Created a custom Wazuh rule to detect "Admin" logins originating from non-corporate IP ranges. Unauthorized login attempts trigger an Active Response that blocks the source IP via firewall rules and disables the compromised account.
 
+---
 
-🔹 [Blocking SSH Anomalies (Geo/IP Filtering)](./active.response.md) 
+### [Cloud Identity Monitoring (Microsoft 365)](./active.response.md) 
+Configured Wazuh to ingest Office 365 audit logs for cloud security monitoring. Created custom detection rules for brute force authentication attempts, suspicious file sharing activity, and mass deletion events. This extended SOC visibility beyond on-premises infrastructure into the organization's SaaS environment.
 
-- **The Goal**: protect the "Admin" account from logging in outside the corporate network.
-
-- **How**: Created a custom rule to identify logins from outside the approved IP range. If the "Admin" user attempts a login from a non-whitelisted IP, the firewall immediately bans the source IP and block the user.
-
-
-🔹 [Cloud Identity Monitoring (Microsoft 365)](./active.response.md) 
-
-- **The Goal**: Gain visibility into SaaS environment threats.
-
-- **How**: Configured the Wazuh Office365 module to ingest audit logs from Microsoft365. Created custom correlation rules to flag Brute Force attempts, suspicious file exfiltration attempts, and mass delete events.
