@@ -32,7 +32,7 @@ The lab is hosted on VirtualBox and is designed to mimic a small corporate netwo
 Below are some of the more interesting detection and response use cases implemented in this lab.
 Each item links to a detailed breakdown explaining the logic, rules and results.
 
-### [Active Response: VirusTotal Integration](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Active%20Response%3A%20VirusTotal%20Integration)
+### [Active Response: VirusTotal Integration](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Active%20Response%3A%20VirusTotal%20Integration.md)
 Integrated **VirusTotal** with **Wazuh** to enable automated malware detection and removal on endpoints. When FIM detects a new file in monitored directories, the hash is queried against VirusTotal's threat intelligence database. Malicious files trigger an Active Response script that deletes the file and generates an alert.
 
 ---
