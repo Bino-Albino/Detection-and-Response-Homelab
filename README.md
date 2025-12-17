@@ -32,16 +32,16 @@ The lab is hosted on VirtualBox and is designed to mimic a small corporate netwo
 Below are some of the more interesting detection and response use cases implemented in this lab.
 Each item links to a detailed breakdown explaining the logic, rules and results.
 
-### [Active Response: VirusTotal Integration](./active.response.md) 
+### [Active Response: VirusTotal Integration](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Active%20Response%3A%20VirusTotal%20Integration)
 Integrated **VirusTotal** with **Wazuh** to enable automated malware detection and removal on endpoints. When FIM detects a new file in monitored directories, the hash is queried against VirusTotal's threat intelligence database. Malicious files trigger an Active Response script that deletes the file and generates an alert.
 
 ---
 
-### [Blocking SSH Anomalies (Geo/IP Filtering)](./active.response.md) 
+### [Blocking SSH Anomalies (Geo/IP Filtering)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Blocking%20SSH%20Anomalies%20(Geo-IP%20Filtering)) 
 Implemented geolocation-based access control for privileged accounts. Created a custom Wazuh rule to detect "Admin" logins originating from non-corporate IP ranges. Unauthorized login attempts trigger an Active Response that blocks the source IP via firewall rules and disables the compromised account.
 
 ---
 
-### [Cloud Identity Monitoring (Microsoft 365)](./active.response.md) 
+### [Cloud Identity Monitoring (Microsoft 365)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Cloud%20Identity%20Monitoring%20(Microsoft%20365)) 
 Configured Wazuh to ingest Office 365 audit logs for cloud security monitoring. Created custom detection rules for brute force authentication attempts, suspicious file sharing activity, and mass deletion events. This extended SOC visibility beyond on-premises infrastructure into the organization's SaaS environment.
 
