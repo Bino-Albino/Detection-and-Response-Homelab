@@ -34,7 +34,7 @@ The bellow snippet has to be added to the **C:\Program Files (x86)\ossec-agent\o
 ### Step 2: Integrate VirusTotal into Wazuh
 
 The next snippet has to be added into the ``` /var/ossec/etc/ossec.conf ``` on the wazuh server.
-```
+```xml
 <ossec_config>
   <integration>
     <name>virustotal</name>
@@ -49,7 +49,7 @@ The next snippet has to be added into the ``` /var/ossec/etc/ossec.conf ``` on t
 
 The script is available in the official Wazuh Documentation.
 
-```
+```python
 # Copyright (C) 2015-2025, Wazuh Inc.
 # All rights reserved.
 
@@ -208,7 +208,7 @@ This script then has to be transformed into a .exe file using pyinstaller and af
 
 ### Step 4: Enable Active Response and trigger the **remove-threat.exe** executable when the VirusTotal query returns positive matches for threats
 
-```
+```xml
 <ossec_config>
   <command>
     <name>remove-threat</name>
@@ -227,7 +227,7 @@ This script then has to be transformed into a .exe file using pyinstaller and af
 
 ### Step 5:  Adding the following rule into the ```/var/ossec/etc/rules/local_rules.xml```  to alert about the Active Response results
 
-```
+```xml
 <group name="virustotal,">
   <rule id="100092" level="12">
       <if_sid>657</if_sid>
