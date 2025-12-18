@@ -38,7 +38,7 @@ The next snippet has to be added into the ``` /var/ossec/etc/ossec.conf ``` on t
 <ossec_config>
   <integration>
     <name>virustotal</name>
-    <api_key><YOUR_VIRUS_TOTAL_API_KEY></api_key> <!-- Replace with your VirusTotal API key -->
+    <api_key><YOUR_VIRUS_TOTAL_API_KEY></api_key> 
     <group>syscheck</group>
     <alert_format>json</alert_format>
   </integration>
