@@ -42,6 +42,6 @@ Implemented geolocation-based access control for privileged accounts. Created a 
 
 ---
 
-### [Cloud Identity Monitoring (Microsoft 365)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Cloud%20Identity%20Monitoring%20(Microsoft%20365)) 
+### [Cloud Identity Monitoring (Microsoft 365)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Cloud%20Identity%20Monitoring%20(Microsoft%20365).md) 
 Configured Wazuh to ingest Office 365 audit logs for cloud security monitoring. Created custom detection rules for brute force authentication attempts, suspicious file sharing activity, and mass deletion events. This extended SOC visibility beyond on-premises infrastructure into the organization's SaaS environment.
 
