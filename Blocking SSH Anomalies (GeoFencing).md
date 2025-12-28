@@ -3,7 +3,7 @@ Implemented geolocation-based access control to protect privileged accounts from
 
 ## Architecture
 ```
-SSH Login Attempt (from 203.0.113.45)
+SSH Login Attempt
         ↓
 Successful Authentication (Rule 5715)
         ↓
