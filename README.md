@@ -37,7 +37,7 @@ Integrated **VirusTotal** with **Wazuh** to enable automated malware detection a
 
 ---
 
-### [Blocking SSH Anomalies (GeoFencing)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/edit/main/Blocking%20SSH%20Anomalies%20(GeoFencing).md) 
+### [Blocking SSH Anomalies (GeoFencing)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Blocking%20SSH%20Anomalies%20(GeoFencing).md) 
 Implemented geolocation-based access control for privileged accounts. Created a custom Wazuh rule to detect "Admin" logins originating from non-corporate IP ranges. Unauthorized login attempts trigger an Active Response that blocks the source IP via firewall rules and disables the compromised account.
 
 ---
