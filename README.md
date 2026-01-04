@@ -10,7 +10,7 @@
 The lab is hosted on VirtualBox and is designed to mimic a small corporate network, providing a realistic environment for attack simulation and alert investigation.
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/HomeLab-Diagram.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/HomeLab-Diagram.jpg" width="900">
   <br>
   <strong>HomeLab Diagram</strong>
 </p>
