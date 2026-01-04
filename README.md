@@ -48,6 +48,6 @@ Configured Wazuh to ingest Office 365 audit logs for cloud security monitoring. 
 
 ---
 
-### [Network Security: Firewall and Suricata alerts](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Cloud%20Identity%20Monitoring%20(Microsoft%20365).md) 
+### [Network Security: Firewall and Suricata alerts](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Network%20Security%3A%20Firewall%20and%20Suricata%20alerts.md) 
 Integrated pfSense firewall and Suricata IDS logs with Wazuh for network-level threat detection. Built custom decoders to parse firewall events and IDS signatures.
 
