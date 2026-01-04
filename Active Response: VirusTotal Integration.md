@@ -244,7 +244,7 @@ I tested the Use Case with a benign EICAR file that I downloaded from Ikarus Sof
 After the file was downloaded almost immediately got deleted by the active response as can be seen in the screen shot below.
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/VirusTotal%20Response.jpeg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/VirusTotal%20Response.jpeg" width="2000">
   <br>
   <strong>Alerts in Wazuh Dashboard</strong>
 </p>
