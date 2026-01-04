@@ -82,13 +82,13 @@ Add the following to `/var/ossec/etc/ossec.conf`
 #### Test 1: Legitimate Login (From the Allowed Network)
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Legit%20SSH.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Legit%20SSH.jpg" width="2000">
   <br>
   <strong>SSH login from an allowed range (192.168.1.0/24)</strong>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/SSH%20Legit%20Wazuh.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/SSH%20Legit%20Wazuh.jpg" width="2000">
   <br>
   <strong>Allowed SSH login in Wazuh</strong>
 </p>
@@ -97,13 +97,13 @@ Add the following to `/var/ossec/etc/ossec.conf`
 #### Test 2: Unauthorized Login ( Login Outside of the Allowed Range )
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Unauthorized%20SSH.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Unauthorized%20SSH.jpg" width="2000">
   <br>
   <strong>SSH login from outside of the allowed range</strong>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Active%20Response%20SSH.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Active%20Response%20SSH.jpg" width="2000">
   <br>
   <strong>The Active Response is Immediately Triggered</strong>
 </p>
@@ -112,13 +112,13 @@ Add the following to `/var/ossec/etc/ossec.conf`
 #### Verifying account lockout and firewall drop
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Account%20Lockout.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Account%20Lockout.jpg" width="2000">
   <br>
   <strong>The account "test" is locked</strong>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Firewall-Drop.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Firewall-Drop.jpg" width="2000">
   <br>
   <strong>As we can see from the IpTables, the unauthorized IP got dropped</strong>
 </p>
