@@ -115,14 +115,72 @@ PfSense's filterlog uses a comma-delimited format that Wazuh doesn't parse by de
   <strong>Example of automated scans that hit the pfSense firewall</strong>
 </p>
 
-## Suricata Integration
-
-Deployed Suricata IDS on pfSense to monitor network traffic for intrusions and exploit attempts. Configured syslog-ng to read Suricata's EVE JSON output and forward alerts to Wazuh in real-time.
+## Suricata 
 
 **Configuration:**
 - **Suricata:** Installed via pfSense package manager, monitoring LAN interface
-- **Log Format:** EVE JSON (`/var/log/suricata/suricata_em1/eve.json`)
-- **Forwarding:** syslog-ng sends JSON alerts to Wazuh (UDP 514)
+- **Log Format:** EVE JSON (`/var/log/suricata/suricata_em121426/eve.json`)
+- **Forwarding:** syslog-ng sends JSON alerts to Wazuh (TCP 5140)
 - **Detection:** Wazuh's native Suricata decoder parses alerts automatically
 
 No custom decoders or rules required—Wazuh provides built-in support for Suricata's JSON format.
+
+### Syslog-ng Configuration
+
+#### Wazuh Manager
+```xml
+  <remote>
+    <connection>syslog</connection>
+    <port>5140</port>
+    <protocol>tcp</protocol>
+    <allowed-ips>192.168.1.1/24</allowed-ips>
+  </remote>
+```
+
+#### PfSense 
+
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Syslog-ng%20pfSense.jpg" width="5000">
+  <br>
+  <strong>The source and destination of the logs, with the right path to the suricata JSON file and the output to the Wazuh IP</strong>
+</p>
+
+---
+
+### Alert Example
+
+**NMAP User Agent Scan**
+
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Nmap-Kali-Suricata.jpg" width="5000">
+  <br>
+  <strong>Kali Command</strong>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Nmap-Wazuh-Suricata.jpg" width="5000">
+  <br>
+  <strong>Wazuh</strong>
+</p>
+
+**Nikto Scan**
+
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Nikto-Kali-Suricata.jpg" width="5000">
+  <br>
+  <strong>Kali Command</strong>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Nikto-Suricata-Wazuh.jpg" width="5000">
+  <br>
+  <strong>Wazuh</strong>
+</p>
+
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Nikto-Suricata-Wazuh2.jpg" width="5000">
+  <br>
+  <strong>Wazuh</strong>
+</p>
+
+- Nikto scans trigger tons of default alerts in Suricata
