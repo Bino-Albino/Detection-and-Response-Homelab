@@ -1,13 +1,39 @@
-## Overview of this Use Case
+# Overview of this Use Case
 Integrated pfSense firewall and Suricata IDS logs with Wazuh to enable network threat detection. Since pfSense runs on FreeBSD and doesn't support the Wazuh agent, logs are forwarded via syslog. Built custom decoders to parse pfSense's raw logs, extracting fields like source IP, destination IP, action and protocol.
 
 Suricata logs are forwarded using syslog-ng, which preserves the full EVE JSON format. Wazuh's built-in Suricata decoder handles these logs natively, providing immediate detection of network intrusions, web attacks, and malicious traffic patterns without custom rule development.
 
 **Architecture:**
 ```
-pfSense Firewall → Syslog → Custom Decoder → Wazuh
-Suricata IDS → Syslog-ng → Native JSON Decoder → Wazuh
+pfSense Firewall -> Syslog -> Custom Decoder -> Custom Rules -> Wazuh
 ```
+```
+Suricata IDS -> Syslog-ng -> Native JSON Decoder -> Wazuh
+```
+
+
+## PfSense Firewall
+
+### Syslog Configuration
+
+#### Wazuh Manager
+```xml
+<remote>
+    <connection>syslog</connection>
+    <port>514</port>
+    <protocol>udp</protocol>
+    <allowed-ips>192.168.1.1/24</allowed-ips>
+  </remote>
+```
+
+#### PfSense 
+<p align="center">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/pfSense%20Syslog.jpg" width="5000">
+  <br>
+  <strong>PfSense GUI</strong>
+</p>
+
+
 ### PfSense Custom Decoder
 PfSense's filterlog uses a comma-delimited format that Wazuh doesn't parse by default. I built a two-stage decoder, the parent identifies logs containing "filterlog," and the child uses regex to extract security-relevant fields from the comma-separated values.
 ```xml
