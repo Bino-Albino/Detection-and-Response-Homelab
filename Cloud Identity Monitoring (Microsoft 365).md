@@ -16,12 +16,12 @@ Integrated Microsoft 365 audit logs with Wazuh to extend detection capabilities 
 - To authenticate with the Microsoft identity platform endpoint, you need to register an app in your Azure portal.
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Azure-App.png" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Azure-App.png" width="2000">
   <br>
 </p>
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Azure-App2.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Azure-App2.jpg" width="2000">
   <br>
   <strong>App Registration</strong>
 </p>
@@ -34,7 +34,7 @@ Integrated Microsoft 365 audit logs with Wazuh to extend detection capabilities 
 
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Audit%20Logging%20Activation.png" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Audit%20Logging%20Activation.png" width="2000">
   <br>
 </p>
 
@@ -68,7 +68,7 @@ On the Wazuh Manager, edit ```/var/ossec/etc/ossec.conf```:
 At this point, Microsoft 365 audit logs are flowing into Wazuh via the Management API. The Office365 module automatically parses and normalizes the data, extracting fields like user identity, operation type, source IP, and timestamps. This provides baseline visibility into cloud activity before custom detection rules are applied.
 
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Microsoft365%20Baseline%20View.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Microsoft365%20Baseline%20View.jpg" width="2000">
   <br>
   <strong>Dashboard Overview</strong>
 </p>
@@ -93,7 +93,7 @@ At this point, Microsoft 365 audit logs are flowing into Wazuh via the Managemen
 ```
 **Alert Example:**
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Mass%20Delete%20Use%20Case.jpg?raw=true" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Mass%20Delete%20Use%20Case.jpg?raw=true" width="2000">
   <br>
 </p>
 
@@ -115,7 +115,7 @@ At this point, Microsoft 365 audit logs are flowing into Wazuh via the Managemen
 ```
 **Alert Example:**
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Data%20Exfil.jpg?raw=true" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Data%20Exfil.jpg?raw=true" width="2000">
   <br>
 </p>
 
@@ -137,7 +137,7 @@ At this point, Microsoft 365 audit logs are flowing into Wazuh via the Managemen
 ```
 **Alert Example:**
 <p align="center">
-  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Brute%20Force.jpg" width="700">
+  <img src="https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Assets/Brute%20Force.jpg" width="2000">
   <br>
 </p>
 
