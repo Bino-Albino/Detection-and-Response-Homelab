@@ -23,6 +23,7 @@ The lab is hosted on VirtualBox and is designed to mimic a small corporate netwo
 | Network Security | pfSense + Suricata | Firewall and routing infrastructure with integrated IDS traffic analysis. |
 | Endpoint | Sysmon + Wazuh Agents | Endpoint telemetry collection, including process creation, DNS activity and authentication events. |
 | Cloud | Microsoft 365 | Ingestion of Microsoft 365 audit logs available from the tenant for visibility and experimentation. |
+| Attacker | Kali | Attack emulation VM. |
 | Response | Active Response (Python) | Scripts that automatically ban IPs or remediate suspicious activity. |
 | Alerting | Discord Webhooks | Real-time alert notifications delivered via webhook integration. |
 
@@ -44,4 +45,9 @@ Implemented geolocation-based access control for privileged accounts. Created a 
 
 ### [Cloud Identity Monitoring (Microsoft 365)](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Cloud%20Identity%20Monitoring%20(Microsoft%20365).md) 
 Configured Wazuh to ingest Office 365 audit logs for cloud security monitoring. Created custom detection rules for brute force authentication attempts, suspicious file sharing activity, and mass deletion events. This extended SOC visibility beyond on-premises infrastructure into the organization's SaaS environment.
+
+---
+
+### [Network Security: Firewall and Suricata alerts](https://github.com/Bino-Albino/Detection-and-Response-Homelab/blob/main/Cloud%20Identity%20Monitoring%20(Microsoft%20365).md) 
+Integrated pfSense firewall and Suricata IDS logs with Wazuh for network-level threat detection. Built custom decoders to parse firewall events and IDS signatures.
 
